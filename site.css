@@ -1,0 +1,94 @@
+@media only screen and (max-width: 600px) {
+    * {
+        color: yellow;
+    }
+}
+
+html {
+    background-color: #222;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html, body {
+    margin: 0px;
+}
+
+.fullpic {
+  background: url(./images/temp.jpg) no-repeat center center fixed; 
+  background-position: center -220px;
+  background-size: cover;
+}
+
+.sidebar {
+    height: 100%;
+    width: 10vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+nav div {
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div:nth-child(2n) {
+    background-color: #191919;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+}
+
+.maincontainer {
+    margin-left: 10vw;
+    width: 90%;
+}
+
+.gridsection, .aboutsection, .projectsection, .contactsection, .mesection {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:nth-child(2n) {
+    background-color: #333;
+}
+
+.griddy-parent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: #bbb;
+}
+
+.griddy-child {
+    width: 35%;
+    box-shadow: 5px 5px 10px black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #444;
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+}
+
