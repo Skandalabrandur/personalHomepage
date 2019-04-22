@@ -46,6 +46,17 @@ nav div {
     background-color: #191919;
 }
 
+.sub-level-nav {
+    background-color: #333;
+    margin-left: 50vh;
+    display: none;
+}
+
+.sub-level-nav:nth-child(2n) {
+    background-color: #444;
+}
+
+
 nav {
     display: flex;
     flex-direction: column;
