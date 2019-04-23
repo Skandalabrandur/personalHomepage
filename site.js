@@ -1,7 +1,8 @@
+var currentOffset = 0;
 var makeItGo = (loc) => {
     var el = $(`#${loc}`);
     var np = $(el).offset();
-    $('html, body').stop().animate({ scrollTop: np.top }, 500);
+        $('html, body').stop().animate({ scrollTop: np.top }, Math.max(Math.abs(np.top - currentOffset) / 3, 500));
 
 }
 
@@ -21,7 +22,8 @@ $(document).ready(
 );
 
 $(document).on('scroll', () => {
-    if($(this).scrollTop() + 10 >= $('#projects-block').position().top){
+    currentOffset = $(this).scrollTop();
+    if(currentOffset + 10 >= $('#projects-block').position().top){
         $(".sub-level-nav").css("display", "flex").animate({marginLeft: "0px"});
     }
 })
