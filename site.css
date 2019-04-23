@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@media only screen and (max-width: 600px) {
-    * {
-        color: yellow;
-    }
-}
+
 
 html {
     font-family: 'Source Sans Pro', sans-serif;
@@ -20,6 +16,11 @@ html, body {
   background: url(./images/temp.jpg) no-repeat center center fixed; 
   background-position: center -220px;
   background-size: cover;
+}
+
+.maincontainer {
+    margin-left: 10vw;
+    width: 90%;
 }
 
 .sidebar {
@@ -69,12 +70,6 @@ div a {
     font-size: 1.5em;
     color: white;
 }
-
-.maincontainer {
-    margin-left: 10vw;
-    width: 90%;
-}
-
 .gridsection, .aboutsection, .projectsection, .contactsection, .mesection {
     height: 100vh;
     display: flex;
@@ -127,4 +122,14 @@ div a {
     height: 100%;
     display: block;
     font-size: 1.3em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .maincontainer {
+        margin-left: 15vw;
+    }
+
+    .sidebar {
+        width: 15vw;
+    }
 }
