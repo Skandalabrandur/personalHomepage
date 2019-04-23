@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
+/*TODO: Collapse flex elements
+//TODO: Change nav div direction for flex-direction */
 
 html {
     font-family: 'Source Sans Pro', sans-serif;
@@ -13,9 +14,9 @@ html, body {
 }
 
 .fullpic {
-  background: url(./images/temp.jpg) no-repeat center center fixed; 
-  background-position: center -220px;
-  background-size: cover;
+    background: url(./images/temp.jpg) no-repeat center center fixed; 
+    background-position: center -220px;
+    background-size: cover;
 }
 
 .maincontainer {
@@ -70,6 +71,8 @@ div a {
     font-size: 1.5em;
     color: white;
 }
+
+/* TODO: change to section and add the class to relevant parts */
 .gridsection, .aboutsection, .projectsection, .contactsection, .mesection {
     height: 100vh;
     display: flex;
@@ -131,5 +134,31 @@ div a {
 
     .sidebar {
         width: 15vw;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .sidebar {
+        height: 10vh;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .maincontainer {
+        margin-top: 10vw;
+        width: 100%;
+    }
+
+    .gridsection, .aboutsection, .projectsection, .contactsection, .mesection {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
